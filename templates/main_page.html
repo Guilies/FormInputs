@@ -12,44 +12,76 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Hello, world!</h1>
+      <h1 class="display-4">Find out your monster name!</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
-          <label for="input_name">First Name</label>
-          <input type="text" class="form-control" name="input_name"  id="input_name" placeholder="Fred Flintstone">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">Example select</label>
-          <select class="form-control" name="input_dropdown" id="input_dropdown">
-            <option>1 fish</option>
-            <option>2 fish</option>
-            <option>red fish</option>
-            <option>the spanish inquisition</option>
-            <option>blue fish</option>
+          <label for="input_dropdown">First letter of your fist name</label>
+          <select class="form-control" name="Letter" id="Letter">
+            <option>A</option>
+            <option>B</option>
+            <option>C</option>
+            <option>D</option>
+            <option>E</option>
+            <option>F</option>
+            <option>G</option>
+            <option>H</option>
+            <option>I</option>
+            <option>J</option>
+            <option>K</option>
+            <option>L</option>
+            <option>M</option>
+            <option>N</option>
+            <option>O</option>
+            <option>P</option>
+            <option>Q</option>
+            <option>R</option>
+            <option>S</option>
+            <option>T</option>
+            <option>U</option>
+            <option>V</option>
+            <option>W</option>
+            <option>X</option>
+            <option>Y</option>
+            <option>Z</option>
           </select>
-        </div>
+
         <div class="form-group">
-          <label for="input_select">Example multiple select</label>
-          <select multiple class="form-control" name="input_select" id="input_select">
+          <label for="input_dropdown">Last number of the year you were born</label>
+          <select class="form-control" name="Numbers" id="Numbers">
+            <option>0</option>
             <option>1</option>
             <option>2</option>
             <option>3</option>
             <option>4</option>
             <option>5</option>
-          </select>
-        </div>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+        </select>
         <div class="form-group">
-          <label for="input_freeform">Example textarea</label>
-          <textarea class="form-control" name="input_freeform" id="input_freeform" rows="3"></textarea>
+          <label for="input_dropdown">Favorite Color</label>
+          <select class="form-control" name="Color" id="Color">
+            <option>Red</option>
+            <option>Orange</option>
+            <option>Yellow</option>
+            <option>Green</option>
+            <option>Blue</option>
+            <option>Indigo</option>
+            <option>Violet</option>
+          </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
     <div class="container">
-      {% if input_data %} {{ input_data }} {% endif %}
-      <br />
+      <!--{% if input_data %} {{ input_data }} {% endif %}
+    </div>-->
+    <br />
       {% if output %} {{ output }} {% endif %}
     </div>
   </body>
