@@ -8,9 +8,15 @@ def main():
 
 @app.route('/process_inputs', methods=['POST'])
 def process_inputs():
-    name = request.form.get('input_name', '')
-    dropdown = request.form.get('input_dropdown', '')
-    select = request.form.get('input_select', '')
-    freeform = request.form.get('input_freeform', '')
-    return render_template("main_page.html", input_data=dropdown,
-                           output="You're a wizard %s." % name)
+
+    Letter = request.form.get('Letter', '')
+    Number = request.form.get('Number', '')
+    Color = request.form.get('Color', '')
+
+    FirstName = { 'Grumpy', 'Mopey', 'Stupid' }
+    MiddleName = { 'Bob', 'Charlie', 'Joe' }
+    LastName = { 'Lucky', 'Unlucky', 'Sally' }
+
+
+    return render_template("main_page.html",
+                           output=Letter + "'" + Number + "," + " " + "The" + " " + Color)
