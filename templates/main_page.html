@@ -12,67 +12,67 @@
   </head>
   <body>
     <div id="banner" class="container">
-      <h1 class="display-4">Find out your monster name!</h1>
+      <h1 class="display-4">Your Video Game Boss Name</h1>
     </div>
     <div class="container">
       <form action="{{ url_for('process_inputs') }}" method="post">
         <div class="form-group">
         </div>
         <div class="form-group">
-          <label for="input_dropdown">First letter of your fist name</label>
+          <label for="input_dropdown">First letter of your first name</label>
           <select class="form-control" name="Letter" id="Letter">
-            <option>A</option>
-            <option>B</option>
-            <option>C</option>
-            <option>D</option>
-            <option>E</option>
-            <option>F</option>
-            <option>G</option>
-            <option>H</option>
-            <option>I</option>
-            <option>J</option>
-            <option>K</option>
-            <option>L</option>
-            <option>M</option>
-            <option>N</option>
-            <option>O</option>
-            <option>P</option>
-            <option>Q</option>
-            <option>R</option>
-            <option>S</option>
-            <option>T</option>
-            <option>U</option>
-            <option>V</option>
-            <option>W</option>
-            <option>X</option>
-            <option>Y</option>
-            <option>Z</option>
+            <option value="Nokris">A</option>
+            <option value="Gilga">B</option>
+            <option value="Vin">C</option>
+            <option value="Cro">D</option>
+            <option value="Stur">E</option>
+            <option value="Kron">F</option>
+            <option value="Hera">G</option>
+            <option value="Verna">H</option>
+            <option value="Gner">I</option>
+            <option value="Alnar">J</option>
+            <option value="Miren">K</option>
+            <option value="Zuul">L</option>
+            <option value="Reta">M</option>
+            <option value="Nzar">N</option>
+            <option value="Herva">O</option>
+            <option value="Bvud">P</option>
+            <option value="Argent">Q</option>
+            <option value="Lina">R</option>
+            <option value="Quar">S</option>
+            <option value="Ghrag">T</option>
+            <option value="Kor">U</option>
+            <option value="Fesza">V</option>
+            <option value="Yurvg">W</option>
+            <option value="Vrast">X</option>
+            <option value="Mones">Y</option>
+            <option value="Orlan">Z</option>
           </select>
 
         <div class="form-group">
-          <label for="input_dropdown">Last number of the year you were born</label>
-          <select class="form-control" name="Numbers" id="Numbers">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-            <option>6</option>
-            <option>7</option>
-            <option>8</option>
-            <option>9</option>
+          <label for="input_dropdown">Last number of the day you were born</label>
+          <select class="form-control" name="Number" id="Number">
+            <option value="Nar">0</option>
+            <option value="Ved">1</option>
+            <option value="Gud">2</option>
+            <option value="Verid">3</option>
+            <option value="Lerdun">4</option>
+            <option value="Ginar">5</option>
+            <option value="Cerd">6</option>
+            <option value="Dnur">7</option>
+            <option value="Boor">8</option>
+            <option value="Lak">9</option>
         </select>
         <div class="form-group">
           <label for="input_dropdown">Favorite Color</label>
           <select class="form-control" name="Color" id="Color">
-            <option>Red</option>
-            <option>Orange</option>
-            <option>Yellow</option>
-            <option>Green</option>
-            <option>Blue</option>
-            <option>Indigo</option>
-            <option>Violet</option>
+            <option value="Hated">Red</option>
+            <option value="Enormous">Orange</option>
+            <option value="Endless">Yellow</option>
+            <option value="Merciless">Green</option>
+            <option value="Deep">Blue</option>
+            <option value="Mindless">Indigo</option>
+            <option value="Timeless">Violet</option>
           </select>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
@@ -82,7 +82,7 @@
       <!--{% if input_data %} {{ input_data }} {% endif %}
     </div>-->
     <br />
-      {% if output %} {{ output }} {% endif %}
+      <span class="output">{% if output %} {{ output }} {% endif %}</span>
     </div>
   </body>
 </html>
